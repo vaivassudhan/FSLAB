@@ -1,10 +1,19 @@
+<?php
+    $name = $_POST['name'];
+    $fname = $_POST['fname'];
+    $sid = $_POST['sid'];
+    $email = $_POST['email'];
+    $dept = $_POST['dept']; 
+    $db = mysqli_connect('localhost', 'root', '', 'registration');  
+    echo $name;
+?>
 <html>
     <head>
         <title>Registration</title>
     </head>
     <body>
         <h1>Registration</h1>
-        <form action="register.php">
+        <form method="post">
             <label for="name">Name</label>
             <input type="text" id="name">
 
@@ -20,6 +29,9 @@
             <select name="" id="">
                 <option value="CSE">CSE</option>
             </select>
+            <button type="submit">Submit</button>
         </form>
     </body>
 </html>
+
+
